@@ -1,4 +1,4 @@
-#include "StockManager.h"
+#include "./include/StockManager.h"
 
 StockManager::StockManager(std::string dataPath, int maxMemory)
 {
@@ -17,9 +17,7 @@ void StockManager::ReadData2Buf()
     for (int i = 0; i < numSortOnce && std::getline(stockFile, line); i++)
     {
         std::stringstream ss(line);
-        Stock stock;
-        std::getline(ss, stock.tsCode, ',');
-        ss >> stock.tradeDate >> stock.open >> stock.high >> stock.low >> stock.close >> stock.preClose >> stock.change >> stock.pctChg >> stock.vol >> stock.amount;
+        Stock stock(line);
         stockBuffer.push_back(stock);
     }
 }
@@ -60,4 +58,23 @@ void StockManager::ExternalSort()
         ReadData2Buf();
         std::sort(stockBuffer.begin(), stockBuffer.end(), CmpStock());
     }
+}
+
+
+/* TEST */
+void StockManager::TestReadWrite(){
+    ReadData2Buf();
+    std::string tempFileName = WriteBuf2Temp(2024);
+    std::cout << "Finish reading and writing!" << std::endl;
+}
+
+void StockManager::Openfile(){
+    stockFile.open(stockDataPath);
+    if (!stockFile.is_open()){
+        std::cerr << "fail to open file!" << std::endl;
+        return;
+    }
+    std::string line;
+    std::getline(stockFile, line);
+    std::cout << "Open file successfully!" << std::endl;
 }

@@ -4,6 +4,7 @@
 #include <sstream>
 #include <algorithm>
 #include <queue>
+#include <string>
 
 #pragma once
 
@@ -25,9 +26,10 @@ private:
 
 public:
     Stock();
-    Stock(std::string dataLine); // 从一行股票数据构造Stock对象
+    Stock(std::string dataLine); // 根据一行股票数据构造Stock对象
     friend class StockManager;
     friend struct CmpStock;
+    void Display();
 };
 
 struct CmpStock // 用于按要求对股票进行排序
