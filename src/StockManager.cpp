@@ -1,4 +1,4 @@
-#include "./include/StockManager.h"
+#include "../include/StockManager.h"
 
 StockManager::StockManager(std::string dataPath, int maxMemory)
 {

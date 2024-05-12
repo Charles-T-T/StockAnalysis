@@ -1,0 +1,3 @@
+C:/RUC/c++/Projects/StockAnalysis/build/CMakeFiles/test.dir
+C:/RUC/c++/Projects/StockAnalysis/build/CMakeFiles/edit_cache.dir
+C:/RUC/c++/Projects/StockAnalysis/build/CMakeFiles/rebuild_cache.dir

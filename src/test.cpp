@@ -1,4 +1,4 @@
-#include "./include/StockManager.h"
+#include "../include/StockManager.h"
 
 #define MAX_MEMORY 32 * 1024 * 1024
 
@@ -35,7 +35,7 @@ int main()
     // ss >> t.B >> t.C >> t.D;
     t.Display();
 
-    StockManager manager("data_2000.csv", MAX_MEMORY);
+    StockManager manager("../data/data_2000.csv", MAX_MEMORY);
 
     manager.Openfile();
     manager.TestReadWrite();
