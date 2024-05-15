@@ -22,4 +22,5 @@ public:
 
     void TestReadWrite();
     void Openfile();
+    void ShowBufferInfo();
 };

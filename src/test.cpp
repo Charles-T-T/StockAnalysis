@@ -22,22 +22,11 @@ public:
 
 int main()
 {
-    std::string line = "a,b,2,5.3";
-    T t;
-    std::stringstream ss(line);
-    std::getline(ss, t.A, ',');
-    std::getline(ss, t.B, ',');
-    std::string temp;
-    std::getline(ss, temp, ',');
-    t.C = std::stoi(temp);
-    std::getline(ss, temp, ',');
-    t.D = std::stod(temp);
-    // ss >> t.B >> t.C >> t.D;
-    t.Display();
+    std::cout << "START" << std::endl;
+    StockManager manager("../data/China_Stock_N2.csv", MAX_MEMORY);
 
-    StockManager manager("../data/data_2000.csv", MAX_MEMORY);
+    manager.ShowBufferInfo();
 
-    manager.Openfile();
     manager.TestReadWrite();
 
     return 0;

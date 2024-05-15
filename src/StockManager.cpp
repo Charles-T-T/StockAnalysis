@@ -63,9 +63,30 @@ void StockManager::ExternalSort()
 
 /* TEST */
 void StockManager::TestReadWrite(){
-    ReadData2Buf();
-    std::string tempFileName = WriteBuf2Temp(2024);
-    std::cout << "Finish reading and writing!" << std::endl;
+    stockFile.open(stockDataPath);
+    if (!stockFile.is_open())
+    {
+        std::cerr << "Error: Unable to open stock data file: " << stockDataPath << std::endl;
+        return;
+    }
+   
+    // 读取第一行（表头）
+    std::string head;
+    std::getline(stockFile, head);
+    int tempFID = 0;
+    while (!stockFile.eof())
+    {
+        ReadData2Buf();
+        std::string filename = WriteBuf2Temp(tempFID);
+        tempFID++;
+
+        if (tempFID > 50)
+            break;
+    }
+
+    std::cout << "finish reading and writing test!" << std::endl;
+
+    stockFile.close();
 }
 
 void StockManager::Openfile(){
@@ -77,4 +98,10 @@ void StockManager::Openfile(){
     std::string line;
     std::getline(stockFile, line);
     std::cout << "Open file successfully!" << std::endl;
+}
+
+void StockManager::ShowBufferInfo(){
+    std::cout << "Buffer size: " << sortMemory << std::endl;
+
+    std::cout << "Num once: " << numSortOnce << std::endl;
 }
