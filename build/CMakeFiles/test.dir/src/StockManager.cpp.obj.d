@@ -168,4 +168,37 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/deque \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_deque.h \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/deque.tcc \
- C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/filesystem \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_fwd.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_path.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/locale \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_conv.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iomanip \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/quoted_string.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/codecvt \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_dir.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_ops.h

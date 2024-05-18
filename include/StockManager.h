@@ -15,9 +15,9 @@ public:
     StockManager(std::string dataPath, int maxMemory);
     // ~StockManager();
 
-    void ReadData2Buf();                   // 读取股票信息到缓存
+    void ReadData2Buf();                   // 读取一行股票信息到缓存
     std::string WriteBuf2Temp(int fileID); // 将缓存信息写入临时文件，返回文件名
-    void MergeFilesSort();                 // 归并排序各个临时文件
+    void MergeFilesSort(int fileCount);                 // 归并排序各个临时文件
     void ExternalSort();                   // 外排总函数
 
     void TestReadWrite();

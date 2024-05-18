@@ -168,4 +168,18 @@ CMakeFiles/test.dir/src/test.cpp.obj: \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/deque \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_deque.h \
  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/deque.tcc \
- C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime \
+ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h \
+ C:/RUC/c++/Projects/StockAnalysis/include/Timer.h

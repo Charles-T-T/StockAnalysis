@@ -5,6 +5,10 @@
 #include <algorithm>
 #include <queue>
 #include <string>
+#include <stack>
+#include <utility>
+#include <cstdio>
+#include <chrono>
 
 #pragma once
 
@@ -27,9 +31,12 @@ private:
 public:
     Stock();
     Stock(std::string dataLine); // 根据一行股票数据构造Stock对象
+    void WriteToFile(std::ofstream &file) const; // 将一行股票数据写入文件
     friend class StockManager;
     friend struct CmpStock;
+    friend struct CmpPair;
     void Display();
+    bool operator==(const Stock &other) const;
 };
 
 struct CmpStock // 用于按要求对股票进行排序
@@ -44,3 +51,18 @@ struct CmpStock // 用于按要求对股票进行排序
             return a.tradeDate < b.tradeDate;
     }
 };
+
+struct CmpPair
+{
+    bool operator()(const std::pair<Stock, int> &p1, const std::pair<Stock, int> &p2){
+        if (p1.first.tsCode != p2.first.tsCode)
+            return p1.first.tsCode < p2.first.tsCode;
+        else
+            return p1.first.tradeDate < p2.first.tradeDate;
+    }
+};
+
+inline void Stock::WriteToFile(std::ofstream &file) const
+{
+    file << tsCode << "," << tradeDate << "," << open << "," << high << "," << low << "," << close << "," << preClose << "," << change << "," << pctChg << "," << vol << "," << amount << std::endl;
+}

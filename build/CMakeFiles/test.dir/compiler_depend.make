@@ -15,6 +15,7 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/codecvt.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
@@ -43,6 +44,7 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/predefined_ops.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h \
@@ -63,6 +65,8 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
@@ -77,10 +81,13 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
@@ -98,13 +105,16 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/istream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/queue \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/sstream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/streambuf \
@@ -114,6 +124,7 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -131,6 +142,7 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -161,6 +173,7 @@ CMakeFiles/test.dir/src/Stock.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/Sto
   C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/signal.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -179,6 +192,7 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/algorithmfwd.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_ios.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_ios.tcc \
@@ -186,6 +200,7 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/codecvt.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
@@ -195,6 +210,10 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_defines.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_ptr.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_dir.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_fwd.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_ops.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_path.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fstream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h \
@@ -204,8 +223,11 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/istream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_classes.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_classes.tcc \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_conv.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets.tcc \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/localefwd.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
@@ -214,12 +236,16 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/predefined_ops.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/quoted_string.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/sstream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_abs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algo.h \
@@ -234,6 +260,8 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
@@ -242,40 +270,53 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uniform_int_dist.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/codecvt \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/debug.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/deque \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/exception \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/alloc_traits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/atomicity.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/filesystem \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/fstream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/initializer_list \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iomanip \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ios \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/istream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/locale \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/queue \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/sstream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/streambuf \
@@ -285,6 +326,7 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -298,10 +340,13 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -332,6 +377,7 @@ CMakeFiles/test.dir/src/StockManager.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/
   C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/signal.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -357,6 +403,7 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/codecvt.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
@@ -385,6 +432,7 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/predefined_ops.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h \
@@ -405,6 +453,8 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
@@ -419,10 +469,13 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwctype \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
@@ -440,13 +493,16 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/istream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/queue \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/sstream \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/streambuf \
@@ -456,6 +512,7 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -473,6 +530,7 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -503,6 +561,7 @@ CMakeFiles/test.dir/src/test.cpp.obj: C:/RUC/c++/Projects/StockAnalysis/src/test
   C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/signal.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Tools/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -523,6 +582,10 @@ C:/RUC/c++/Projects/StockAnalysis/src/Stock.cpp:
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit:
 
@@ -576,6 +639,14 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/chrono.h:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/codecvt.h:
@@ -616,8 +687,6 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/invoke.h:
 
-C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h:
-
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ios_base.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
@@ -652,12 +721,6 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocato
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h:
 
-C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_queue.h:
-
-C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h:
-
-C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h:
-
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/sstream.tcc:
@@ -666,7 +729,13 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algo.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_construct.h:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_relops.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_stack.h:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h:
 
@@ -677,6 +746,8 @@ C:/Tools/mingw64/x86_64-w64-mingw32/include/locale.h:
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf_iterator.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/filesystem:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h:
 
@@ -692,13 +763,19 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/chrono:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdint:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwctype:
 
@@ -716,6 +793,8 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_trait
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/locale:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/fstream:
@@ -730,6 +809,8 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/istream:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream:
@@ -741,6 +822,12 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_algorit
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/queue:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ratio:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/codecvt:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stack:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept:
 
@@ -758,13 +845,21 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h:
+
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo:
+
+C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/signal.h:
 
@@ -780,8 +875,6 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw3
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h:
 
-C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
-
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
 
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
@@ -793,8 +886,6 @@ C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
 C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw.h:
-
-C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
 
@@ -830,11 +921,15 @@ C:/Tools/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_conv.h:
+
 C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
+
+C:/Tools/mingw64/x86_64-w64-mingw32/include/stdint.h:
 
 C:/Tools/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
@@ -855,5 +950,35 @@ C:/Tools/mingw64/x86_64-w64-mingw32/include/wchar.h:
 C:/RUC/c++/Projects/StockAnalysis/src/StockManager.cpp:
 
 C:/RUC/c++/Projects/StockAnalysis/include/StockManager.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.tcc:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_dir.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_fwd.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_ops.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_path.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets_nonio.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/quoted_string.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iomanip:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
+
+C:/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/RUC/c++/Projects/StockAnalysis/src/test.cpp:

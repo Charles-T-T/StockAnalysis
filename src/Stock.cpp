@@ -1,4 +1,4 @@
-#include "../include/Stock.h"
+#include "Stock.h"
 
 Stock::Stock() : tsCode(""), tradeDate(0), open(0), high(0), low(0), close(0), preClose(0), change(0), pctChg(0), vol(0), amount(0) {}
 
@@ -41,3 +41,11 @@ void Stock::Display(){
     std::cout << "Volumn: " << vol << std::endl;
     std::cout << "Amount: " << amount << std::endl;
 }
+
+bool Stock::operator==(const Stock& other) const{
+    return tsCode == other.tsCode && tradeDate == other.tradeDate;
+}
+ 
+
+
+// 320682
