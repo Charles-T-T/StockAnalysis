@@ -44,7 +44,7 @@ void StockManager::MergeFilesSort(int fileCount)
 {
     std::vector<std::fstream> files(fileCount);
     // 用一个优先队列进行股票排序
-    std::priority_queue<std::pair<Stock, int>, std::vector<std::pair<Stock, int>>, CmpPair> pq; 
+    std::priority_queue<std::pair<Stock, int>, std::vector<std::pair<Stock, int>>, CmpPair> pq;
     // 打开各个待归并的临时文件，将每个文件的第一行（其中最小的）写入优先队列pq
     for (int i = 0; i < fileCount; i++)
     {
@@ -56,7 +56,8 @@ void StockManager::MergeFilesSort(int fileCount)
     // 定义输出文件
     std::string outPath = "output.txt";
     std::ofstream outFile(outPath);
-    if (!outFile.is_open()){
+    if (!outFile.is_open())
+    {
         std::cerr << "output file open fail!" << std::endl;
     }
 
@@ -67,14 +68,18 @@ void StockManager::MergeFilesSort(int fileCount)
         pq.top().first.WriteToFile(outFile);
         curMinFID = pq.top().second;
         pq.pop();
-        if (std::getline(files[curMinFID], curDataLine)){
+        if (std::getline(files[curMinFID], curDataLine))
+        {
             // 从该文件中读取下一行股票数据
             pq.push(std::make_pair(Stock(curDataLine), curMinFID));
-        } else {
+        }
+        else
+        {
             // 若该文件已读完，将其关闭并删除
             // TODO 是否能直接删除？
             files[curMinFID].close();
-            if (!fs::remove("temp_" + std::to_string(curMinFID) + ".txt")){
+            if (!fs::remove("temp_" + std::to_string(curMinFID) + ".txt"))
+            {
                 std::cerr << "Fail to delete temp_" << curMinFID << ".txt!" << std::endl;
             }
         }
@@ -102,14 +107,16 @@ void StockManager::ExternalSort()
     int tempFID = 0;
     std::string dataLine;
     std::getline(stockFile, dataLine); // 读取表头
-    while (std::getline(stockFile, dataLine)){
+    while (std::getline(stockFile, dataLine))
+    {
         // 读取数据到缓冲区
         // TODO debug line
         std::cout << "tempFID: " << tempFID << std::endl;
-        
+
         stockBuffer.clear();
         stockBuffer.emplace_back(dataLine);
-        for (int i = 1; i < numSortOnce; ++i){
+        for (int i = 1; i < numSortOnce; ++i)
+        {
             if (std::getline(stockFile, dataLine))
                 stockBuffer.emplace_back(dataLine);
             else
@@ -126,16 +133,16 @@ void StockManager::ExternalSort()
     MergeFilesSort(tempFID);
 }
 
-
 /* TEST */
-void StockManager::TestReadWrite(){
+void StockManager::TestReadWrite()
+{
     stockFile.open(stockDataPath);
     if (!stockFile.is_open())
     {
         std::cerr << "Error: Unable to open stock data file: " << stockDataPath << std::endl;
         return;
     }
-   
+
     // 读取第一行（表头）
     std::string head;
     std::getline(stockFile, head);
@@ -149,17 +156,19 @@ void StockManager::TestReadWrite(){
         if (tempFID > 50)
             break;
     }
-    //TODO debug line
+    // TODO debug line
     std::cout << tempFID << std::endl;
-    
+
     std::cout << "finish reading and writing test!" << std::endl;
 
     stockFile.close();
 }
 
-void StockManager::Openfile(){
+void StockManager::Openfile()
+{
     stockFile.open(stockDataPath);
-    if (!stockFile.is_open()){
+    if (!stockFile.is_open())
+    {
         std::cerr << "fail to open file!" << std::endl;
         return;
     }
@@ -168,7 +177,8 @@ void StockManager::Openfile(){
     std::cout << "Open file successfully!" << std::endl;
 }
 
-void StockManager::ShowBufferInfo(){
+void StockManager::ShowBufferInfo()
+{
     std::cout << "Buffer size: " << sortMemory << std::endl;
 
     std::cout << "Num once: " << numSortOnce << std::endl;

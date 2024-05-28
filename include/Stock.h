@@ -30,7 +30,7 @@ private:
 
 public:
     Stock();
-    Stock(std::string dataLine); // 根据一行股票数据构造Stock对象
+    Stock(std::string dataLine);                 // 根据一行股票数据构造Stock对象
     void WriteToFile(std::ofstream &file) const; // 将一行股票数据写入文件
     friend class StockManager;
     friend struct CmpStock;
@@ -54,7 +54,8 @@ struct CmpStock // 用于按要求对股票进行排序
 
 struct CmpPair
 {
-    bool operator()(const std::pair<Stock, int> &p1, const std::pair<Stock, int> &p2){
+    bool operator()(const std::pair<Stock, int> &p1, const std::pair<Stock, int> &p2)
+    {
         if (p1.first.tsCode != p2.first.tsCode)
             return p1.first.tsCode < p2.first.tsCode;
         else
