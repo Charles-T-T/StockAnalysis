@@ -1,6 +1,7 @@
+#pragma once
+
 #include "Stock.h"
 
-#pragma once
 class StockManager
 {
 private:

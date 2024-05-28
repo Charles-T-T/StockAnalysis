@@ -1,4 +1,5 @@
 #include "StockManager.h"
+#include "StockPQ.h"
 #include <filesystem>
 
 namespace fs = std::filesystem;
@@ -46,7 +47,7 @@ void StockManager::MergeFilesSort(int fileCount)
 {
     std::vector<std::fstream> files(fileCount);
     // 用一个优先队列进行股票排序
-    std::priority_queue<std::pair<Stock, int>, std::vector<std::pair<Stock, int>>, CmpPair> pq;
+    MyPQ<std::pair<Stock, int>, CmpPair> pq;
     // 打开各个待归并的临时文件，将每个文件的第一行（其中最小的）写入优先队列pq
     for (int i = 0; i < fileCount; i++)
     {

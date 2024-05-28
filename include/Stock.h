@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -9,8 +11,6 @@
 #include <utility>
 #include <cstdio>
 #include <chrono>
-
-#pragma once
 
 class StockManager;
 class Stock
