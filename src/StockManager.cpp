@@ -3,6 +3,8 @@
 
 namespace fs = std::filesystem;
 
+constexpr int DEBUG_MOOD = 1;
+
 StockManager::StockManager(std::string dataPath, int maxMemory)
 {
     stockDataPath = dataPath;
@@ -78,6 +80,10 @@ void StockManager::MergeFilesSort(int fileCount)
             // 若该文件已读完，将其关闭并删除
             // TODO 是否能直接删除？
             files[curMinFID].close();
+            
+            if (DEBUG_MOOD)
+                std::cout << "merge temp_" << curMinFID << std::endl;
+            
             if (!fs::remove("temp_" + std::to_string(curMinFID) + ".txt"))
             {
                 std::cerr << "Fail to delete temp_" << curMinFID << ".txt!" << std::endl;
@@ -86,14 +92,16 @@ void StockManager::MergeFilesSort(int fileCount)
     }
 
     outFile.close();
-    // TODO debug line
-    std::cout << "Finish merging!" << std::endl;
+    
+    if (DEBUG_MOOD)
+        std::cout << "Finish merging!" << std::endl;
 }
 
 void StockManager::ExternalSort()
 {
-    // TODO debug line
-    std::cout << "Start externalSort" << std::endl;
+    if (DEBUG_MOOD)
+        std::cout << "Start externalSort" << std::endl;
+    
     stockFile.open(stockDataPath);
     if (!stockFile.is_open())
     {
@@ -102,16 +110,17 @@ void StockManager::ExternalSort()
     }
 
     // 分块排序
-    // TODO debug line
-    std::cout << "Start divided sorting" << std::endl;
+    if (DEBUG_MOOD)
+        std::cout << "Start divided sorting" << std::endl;
+    
     int tempFID = 0;
     std::string dataLine;
     std::getline(stockFile, dataLine); // 读取表头
     while (std::getline(stockFile, dataLine))
     {
         // 读取数据到缓冲区
-        // TODO debug line
-        std::cout << "tempFID: " << tempFID << std::endl;
+        if (DEBUG_MOOD)
+            std::cout << "tempFID: " << tempFID << std::endl;
 
         stockBuffer.clear();
         stockBuffer.emplace_back(dataLine);
@@ -156,8 +165,9 @@ void StockManager::TestReadWrite()
         if (tempFID > 50)
             break;
     }
-    // TODO debug line
-    std::cout << tempFID << std::endl;
+    
+    if (DEBUG_MOOD)
+        std::cout << "temp_" << tempFID << std::endl;
 
     std::cout << "finish reading and writing test!" << std::endl;
 
