@@ -1,4 +1,6 @@
-intro
-test
+test/
 data/China_Stock_N2.csv 
-.vscode
+.vscode/
+
+*.exe
+
