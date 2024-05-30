@@ -2,9 +2,9 @@
 test/
 build/
 bin/
-
+res/
 
 data/China_Stock_N2.csv 
 
 *.exe
-
+*.txt
