@@ -1,5 +1,6 @@
-#include "StockManager.h"
-#include "StockPQ.h"
+#include "../include/StockManager.h"
+#include "../include/StockPQ.h"
+#include "../include/Timer.h"
 #include <filesystem>
 
 namespace fs = std::filesystem;
@@ -18,11 +19,10 @@ void StockManager::ReadData2Buf()
     stockBuffer.clear();
     // stockBuffer.resize(numSortOnce);
 
-    // ÖğĞĞ¶ÁÈ¡¹ÉÆ±ĞÅÏ¢²¢Ğ´Èë»º´æÇø
+    // é€è¡Œè¯»å–è‚¡ç¥¨ä¿¡æ¯å¹¶å†™å…¥ç¼“å­˜åŒº
     std::string line;
     for (int i = 0; i < numSortOnce && std::getline(stockFile, line); i++)
     {
-        std::stringstream ss(line);
         Stock stock(line);
         stockBuffer.push_back(stock);
     }
@@ -33,22 +33,23 @@ std::string StockManager::WriteBuf2Temp(int fileID)
     std::string fileName = "temp_" + std::to_string(fileID) + ".txt";
     std::ofstream outFile(fileName);
 
-    // ½«»º´æÇøÄÚÈİĞ´ÈëÁÙÊ±ÎÄ¼ş
+    // å°†ç¼“å­˜åŒºå†…å®¹å†™å…¥ä¸´æ—¶æ–‡ä»¶
     for (const Stock &stock : stockBuffer)
     {
         stock.WriteToFile(outFile);
     }
     outFile.close();
     tempFileNames.push_back(fileName);
+    stockBuffer.clear();
     return fileName;
 }
 
 void StockManager::MergeFilesSort(int fileCount)
 {
     std::vector<std::fstream> files(fileCount);
-    // ÓÃÒ»¸öÓÅÏÈ¶ÓÁĞ½øĞĞ¹ÉÆ±ÅÅĞò
+    // ç”¨ä¸€ä¸ªä¼˜å…ˆé˜Ÿåˆ—è¿›è¡Œè‚¡ç¥¨æ’åº
     MyPQ<std::pair<Stock, int>, CmpPair> pq;
-    // ´ò¿ª¸÷¸ö´ı¹é²¢µÄÁÙÊ±ÎÄ¼ş£¬½«Ã¿¸öÎÄ¼şµÄµÚÒ»ĞĞ£¨ÆäÖĞ×îĞ¡µÄ£©Ğ´ÈëÓÅÏÈ¶ÓÁĞpq
+    // æ‰“å¼€å„ä¸ªå¾…å½’å¹¶çš„ä¸´æ—¶æ–‡ä»¶ï¼Œå°†æ¯ä¸ªæ–‡ä»¶çš„ç¬¬ä¸€è¡Œï¼ˆå…¶ä¸­æœ€å°çš„ï¼‰å†™å…¥ä¼˜å…ˆé˜Ÿåˆ—pq
     for (int i = 0; i < fileCount; i++)
     {
         files[i].open("temp_" + std::to_string(i) + ".txt");
@@ -56,30 +57,34 @@ void StockManager::MergeFilesSort(int fileCount)
         std::getline(files[i], dataLine);
         pq.push(std::make_pair(Stock(dataLine), i));
     }
-    // ¶¨ÒåÊä³öÎÄ¼ş
-    std::string outPath = "output.txt";
+    // å®šä¹‰è¾“å‡ºæ–‡ä»¶
+    std::string outPath = "../res/output.txt";
     std::ofstream outFile(outPath);
     if (!outFile.is_open())
     {
         std::cerr << "output file open fail!" << std::endl;
     }
 
-    int curMinFID; // µ±Ç°×îĞ¡µÄ¹ÉÆ±ĞÅÏ¢£¨pq¶ÓÍ·µÄ£©ËùÊôµÄÎÄ¼ş±àºÅ
+    int curMinFID; // å½“å‰æœ€å°çš„è‚¡ç¥¨ä¿¡æ¯ï¼ˆpqé˜Ÿå¤´çš„ï¼‰æ‰€å±çš„æ–‡ä»¶ç¼–å·
     std::string curDataLine;
     while (!pq.empty())
     {
+        // TODO debug line
+        Stock topStock = pq.top().first;
+
         pq.top().first.WriteToFile(outFile);
         curMinFID = pq.top().second;
         pq.pop();
+        topStock = pq.top().first;
+
         if (std::getline(files[curMinFID], curDataLine))
         {
-            // ´Ó¸ÃÎÄ¼şÖĞ¶ÁÈ¡ÏÂÒ»ĞĞ¹ÉÆ±Êı¾İ
+            // ä»è¯¥æ–‡ä»¶ä¸­è¯»å–ä¸‹ä¸€è¡Œè‚¡ç¥¨æ•°æ®
             pq.push(std::make_pair(Stock(curDataLine), curMinFID));
         }
         else
         {
-            // Èô¸ÃÎÄ¼şÒÑ¶ÁÍê£¬½«Æä¹Ø±Õ²¢É¾³ı
-            // TODO ÊÇ·ñÄÜÖ±½ÓÉ¾³ı£¿
+            // è‹¥è¯¥æ–‡ä»¶å·²è¯»å®Œï¼Œå°†å…¶å…³é—­å¹¶åˆ é™¤
             files[curMinFID].close();
             
             if (DEBUG_MOOD)
@@ -110,16 +115,18 @@ void StockManager::ExternalSort()
         return;
     }
 
-    // ·Ö¿éÅÅĞò
+    // åˆ†å—æ’åº
     if (DEBUG_MOOD)
         std::cout << "Start divided sorting" << std::endl;
+
+    Timer timer;
     
     int tempFID = 0;
     std::string dataLine;
-    std::getline(stockFile, dataLine); // ¶ÁÈ¡±íÍ·
+    std::getline(stockFile, dataLine); // è¯»å–è¡¨å¤´
     while (std::getline(stockFile, dataLine))
     {
-        // ¶ÁÈ¡Êı¾İµ½»º³åÇø
+        // è¯»å–æ•°æ®åˆ°ç¼“å†²åŒº
         if (DEBUG_MOOD)
             std::cout << "tempFID: " << tempFID << std::endl;
 
@@ -132,15 +139,78 @@ void StockManager::ExternalSort()
             else
                 break;
         }
-        // ÔÚ»º³åÇøÅÅĞò
+        // åœ¨ç¼“å†²åŒºæ’åº
         std::sort(stockBuffer.begin(), stockBuffer.end(), CmpStock());
-        // ½«»º³åÇøÅÅºÃĞòµÄÊı¾İĞ´ÈëÁÙÊ±ÎÄ¼ş
+        // å°†ç¼“å†²åŒºæ’å¥½åºçš„æ•°æ®å†™å…¥ä¸´æ—¶æ–‡ä»¶
         WriteBuf2Temp(tempFID++);
     }
+    if (DEBUG_MOOD)
+        std::cout << "Time for dividing sort: " << timer.elapsed() << "ms" << std::endl;
+    timer.reset();
 
-    // ¹é²¢ÅÅĞò
+    // å½’å¹¶æ’åº
     std::cout << "Start merging" << std::endl;
     MergeFilesSort(tempFID);
+
+    if (DEBUG_MOOD)
+        std::cout << "Time for merging sort: " << timer.elapsed() << "ms" << std::endl;
+}
+
+void StockManager::GenerateIndexFile(const std::string& outputFileName, const std::string& indexFileName) {
+    std::ifstream inputFile(outputFileName, std::ios::in | std::ios::binary);
+    std::ofstream indexFile(indexFileName);
+
+    if (!inputFile.is_open()) {
+        std::cerr << "Failed to open output!" << std::endl;
+        return;
+    }
+
+    if (!indexFile.is_open()){
+        std::cerr << "Failed to open index!" << std::endl;
+    }
+
+    // TODO debug line
+    if (1){
+        std::cout << "Start generating index..." << std::endl;
+    }
+
+    std::vector<IndexItem> indexItems;
+
+    std::string prevLine;
+    std::string curLine;
+    std::streampos offset = 0;
+    if (std::getline(inputFile, prevLine)) {
+        Stock prevStock(prevLine);
+        int prevYM = prevStock.tradeDate / 100; // YM --> "Year & Month"
+
+        // è®°å½•æ¯åªè‚¡ç¥¨æ¯ä¸ªæœˆä»½çš„ç¬¬ä¸€æ¡ä»·æ ¼æ•°æ®çš„åç§»é‡
+        while (std::getline(inputFile, curLine)){
+            Stock curStock(curLine);
+            int curYM = curStock.tradeDate / 100;
+            
+            if (curStock.tsCode != prevStock.tsCode || curYM != prevYM) {
+                // è®°å½•ä¸Šä¸€æ¡è‚¡ç¥¨æ•°æ®çš„åç§»é‡
+                IndexItem indexItem;
+                indexItem.tsCode = prevStock.tsCode;
+                indexItem.tradeYM = prevYM;
+                indexItem.offset = offset;
+                indexItems.push_back(indexItem);
+
+                prevStock = curStock;
+                prevYM = curYM;
+            }
+            offset = inputFile.tellg();
+        } 
+    }
+
+    // å†™å…¥ç´¢å¼•æ–‡ä»¶
+    for (const auto& item : indexItems) {
+        indexFile << item.tsCode << " " << item.tradeYM << " " << item.offset << std::endl;
+    }
+    
+
+    inputFile.close();
+    indexFile.close();
 }
 
 /* TEST */
@@ -153,7 +223,7 @@ void StockManager::TestReadWrite()
         return;
     }
 
-    // ¶ÁÈ¡µÚÒ»ĞĞ£¨±íÍ·£©
+    // è¯»å–ç¬¬ä¸€è¡Œï¼ˆè¡¨å¤´ï¼‰
     std::string head;
     std::getline(stockFile, head);
     int tempFID = 0;
