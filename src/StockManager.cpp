@@ -156,11 +156,11 @@ void StockManager::ExternalSort()
         std::cout << "Time for merging sort: " << timer.elapsed() << "ms" << std::endl;
 }
 
-void StockManager::GenerateIndexFile(const std::string& outputFileName, const std::string& indexFileName) {
-    std::ifstream inputFile(outputFileName, std::ios::in | std::ios::binary);
+void StockManager::GenerateIndexFile(std::string sortedFileName, std::string indexFileName) {
+    std::ifstream stockFile(sortedFileName, std::ios::in | std::ios::binary);
     std::ofstream indexFile(indexFileName);
 
-    if (!inputFile.is_open()) {
+    if (!stockFile.is_open()) {
         std::cerr << "Failed to open output!" << std::endl;
         return;
     }
@@ -176,42 +176,117 @@ void StockManager::GenerateIndexFile(const std::string& outputFileName, const st
 
     std::vector<IndexItem> indexItems;
 
-    std::string prevLine;
-    std::string curLine;
+    std::string prevLine, curLine;
     std::streampos offset = 0;
-    if (std::getline(inputFile, prevLine)) {
-        Stock prevStock(prevLine);
-        int prevYM = prevStock.tradeDate / 100; // YM --> "Year & Month"
+    std::streampos prevOffset, curOffset;
+    
+    // 逐行扫描output，在需要的行起始位置为其建立索引
+    // 先记录第一行的起始位置，然后读取第一行内容作为prevLine
+    prevOffset = stockFile.tellg();
+    std::getline(stockFile, prevLine);
+    Stock prevStock(prevLine);
+    int prevYM = prevStock.tradeDate / 100; // YM --> "Year & Month"
 
-        // 记录每只股票每个月份的第一条价格数据的偏移量
-        while (std::getline(inputFile, curLine)){
-            Stock curStock(curLine);
-            int curYM = curStock.tradeDate / 100;
-            
-            if (curStock.tsCode != prevStock.tsCode || curYM != prevYM) {
-                // 记录上一条股票数据的偏移量
-                IndexItem indexItem;
-                indexItem.tsCode = prevStock.tsCode;
-                indexItem.tradeYM = prevYM;
-                indexItem.offset = offset;
-                indexItems.push_back(indexItem);
+    while (true){   
+        curOffset = stockFile.tellg();
+        if (!std::getline(stockFile, curLine)){
+            break;
+        }
+        Stock curStock(curLine);
+        int curYM = curStock.tradeDate / 100;
+        if (curStock.tsCode != prevStock.tsCode || curYM != prevYM) {
+            // 记录上一条股票数据的偏移量
+            IndexItem indexItem;
+            indexItem.tsCode = prevStock.tsCode;
+            indexItem.tradeYM = prevYM;
+            indexItem.offset = prevOffset;
+            indexItems.push_back(indexItem);
 
-                prevStock = curStock;
-                prevYM = curYM;
-            }
-            offset = inputFile.tellg();
-        } 
+            prevStock = curStock;
+            prevYM = curYM;
+            prevOffset = curOffset;
+        }
     }
 
+    
     // 写入索引文件
     for (const auto& item : indexItems) {
         indexFile << item.tsCode << " " << item.tradeYM << " " << item.offset << std::endl;
     }
-    
 
-    inputFile.close();
+    stockFile.close();
     indexFile.close();
 }
+
+std::unordered_map<std::string, std::unordered_map<int, std::streampos>>StockManager::LoadIndexFile(std::string indexFileName) {
+    std::unordered_map<std::string, std::unordered_map<int, std::streampos>> indexMap;
+    std::ifstream indexFile(indexFileName);
+    if (!indexFile.is_open()) {
+        std::cerr << "Failed to open index file!" << std::endl;
+        return indexMap;
+    }
+
+    std::string tsCode;
+    int tradeYM;
+    std::streamoff offset;
+
+    
+    while (indexFile >> tsCode >> tradeYM >> offset) {
+        indexMap[tsCode][tradeYM] = std::streampos(offset);
+        // std::cout << "cur 2nd size: " << indexMap[tsCode].size() << std::endl;
+        // std::cout << "cur 1st size: " << indexMap.size() << "\n" << std::endl;
+        
+    }
+
+
+    indexFile.close();
+
+    // TODO debug line
+    std::cout << "index map size: " << indexMap.size() << std::endl;
+
+    return indexMap;
+}
+
+std::vector<Stock>StockManager::QueryStockData(
+    std::string outputFileName, 
+    const std::unordered_map<std::string, std::unordered_map<int, std::streampos>>& indexMap, 
+    std::string tsCode, int yearMonth
+) {
+    std::vector<Stock> result;
+    auto itStock = indexMap.find(tsCode);
+    if (itStock == indexMap.end()) {
+        std::cerr << "Stock code not found in index!" << std::endl;
+        return result;
+    }
+
+    auto itMonth = itStock->second.find(yearMonth);
+    if (itMonth == itStock->second.end()) {
+        std::cerr << "Year-Month not found for the specified stock code in index!" << std::endl;
+        return result;
+    }
+
+    std::streampos offset = itMonth->second;
+    std::ifstream inputFile(outputFileName, std::ios::in | std::ios::binary);
+    if (!inputFile.is_open()) {
+        std::cerr << "Failed to open data file!" << std::endl;
+        return result;
+    }
+
+    inputFile.seekg(offset);
+
+    std::string line;
+    while (std::getline(inputFile, line)) {
+        Stock stock(line);
+        if (stock.tsCode != tsCode || (stock.tradeDate / 100) != yearMonth) {
+            break;
+        }
+        result.push_back(stock);
+    }
+
+    inputFile.close();
+    return result;
+}
+
 
 /* TEST */
 void StockManager::TestReadWrite()

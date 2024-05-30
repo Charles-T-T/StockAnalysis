@@ -1,12 +1,14 @@
 #pragma once
 
 #include "Stock.h"
+#include <unordered_map>
+#include <random>
 
 class StockManager
 {
 private:
-    int sortMemory;  // ÍâÅÅĞò¿ÉÓÃµÄ×î´óÄÚ´æ
-    int numSortOnce; // Ã¿´Î´¦ÀíµÄ¹ÉÆ±Êı
+    int sortMemory;  // å¤–æ’åºå¯ç”¨çš„æœ€å¤§å†…å­˜
+    int numSortOnce; // æ¯æ¬¡å¤„ç†çš„è‚¡ç¥¨æ•°
     std::vector<Stock> stockBuffer;
     std::string stockDataPath;
     std::ifstream stockFile;
@@ -16,12 +18,33 @@ public:
     StockManager(std::string dataPath, int maxMemory);
     // ~StockManager();
 
-    void ReadData2Buf();                   // ¶ÁÈ¡Ò»ĞĞ¹ÉÆ±ĞÅÏ¢µ½»º´æ
-    std::string WriteBuf2Temp(int fileID); // ½«»º´æĞÅÏ¢Ğ´ÈëÁÙÊ±ÎÄ¼ş£¬·µ»ØÎÄ¼şÃû
-    void MergeFilesSort(int fileCount);    // ¹é²¢ÅÅĞò¸÷¸öÁÙÊ±ÎÄ¼ş
-    void ExternalSort();                   // ÍâÅÅ×Üº¯Êı
+    void ReadData2Buf();                   // è¯»å–ä¸€è¡Œè‚¡ç¥¨ä¿¡æ¯åˆ°ç¼“å­˜
+    std::string WriteBuf2Temp(int fileID); // å°†ç¼“å­˜ä¿¡æ¯å†™å…¥ä¸´æ—¶æ–‡ä»¶ï¼Œè¿”å›æ–‡ä»¶å
+    void MergeFilesSort(int fileCount);    // å½’å¹¶æ’åºå„ä¸ªä¸´æ—¶æ–‡ä»¶
+    void ExternalSort();                   // å¤–æ’æ€»å‡½æ•°
 
     void TestReadWrite();
     void Openfile();
     void ShowBufferInfo();
+
+    // åˆ›å»ºç´¢å¼•é¡¹çš„ç»“æ„
+    struct IndexItem {
+        std::string tsCode;       // è‚¡ç¥¨ä»£ç 
+        int tradeYM;       // äº¤æ˜“å¹´æœˆ
+        std::streampos offset;    // åç§»é‡
+    };
+
+    // ç”Ÿæˆç´¢å¼•æ–‡ä»¶
+    void GenerateIndexFile(std::string utputFileName,std::string indexFileName);
+
+    // è¯»å–ç´¢å¼•æ–‡ä»¶å¹¶è¿”å›ä¸€ä¸ªunordered_map
+    std::unordered_map<std::string, std::unordered_map<int, std::streampos>> LoadIndexFile(std::string indexFileName);
+
+    // åˆ©ç”¨ç´¢å¼•æŸ¥è¯¢æŒ‡å®šè‚¡ç¥¨æŸæœˆçš„æ•°æ®
+    std::vector<Stock> QueryStockData(
+        std::string outputFileName, 
+        const std::unordered_map<std::string, std::unordered_map<int, std::streampos>>& indexMap, 
+        std::string tsCode, int yearMonth
+    );
+
 };

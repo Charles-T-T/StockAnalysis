@@ -16,37 +16,42 @@ class StockManager;
 class Stock
 {
 private:
-    std::string tsCode; // ¹ÉÆ±´úÂë
-    int tradeDate;      // ½»Ò×ÈÕÆÚ
-    double open;        // ¿ªÅÌ¼Û
-    double high;        // ×î¸ß¼Û
-    double low;         // ×îµÍ¼Û
-    double close;       // ÊÕÅÌ¼Û
-    double preClose;    // ÁÙ½üÊÕÅÌ¼Û
-    double change;      // ÕÇµø·ù
-    double pctChg;      // ÕÇµø°Ù·Ö±È
-    double vol;         // ½»Ò×Á¿
-    double amount;      // ½»Ò×½ğ¶î
+    std::string tsCode; // è‚¡ç¥¨ä»£ç 
+    int tradeDate;      // äº¤æ˜“æ—¥æœŸ
+    double open;        // å¼€ç›˜ä»·
+    double high;        // æœ€é«˜ä»·
+    double low;         // æœ€ä½ä»·
+    double close;       // æ”¶ç›˜ä»·
+    double preClose;    // ä¸´è¿‘æ”¶ç›˜ä»·
+    double change;      // æ¶¨è·Œå¹…
+    double pctChg;      // æ¶¨è·Œç™¾åˆ†æ¯”
+    double vol;         // äº¤æ˜“é‡
+    double amount;      // äº¤æ˜“é‡‘é¢
 
 public:
     Stock();
-    Stock(std::string dataLine);                 // ¸ù¾İÒ»ĞĞ¹ÉÆ±Êı¾İ¹¹ÔìStock¶ÔÏó
-    void WriteToFile(std::ofstream &file) const; // ½«Ò»ĞĞ¹ÉÆ±Êı¾İĞ´ÈëÎÄ¼ş
+    Stock(std::string dataLine);                 // æ ¹æ®ä¸€è¡Œè‚¡ç¥¨æ•°æ®æ„é€ Stockå¯¹è±¡
+    void WriteToFile(std::ofstream &file) const; // å°†ä¸€è¡Œè‚¡ç¥¨æ•°æ®å†™å…¥æ–‡ä»¶
     friend class StockManager;
     friend struct CmpStock;
     friend struct CmpPair;
-    void Display();
+    void Display() const;
     bool operator==(const Stock &other) const;
+    
+    // è·å–äº¤æ˜“å¹´æœˆä¿¡æ¯
+    int GetTradeYearMonth() const {
+        return tradeDate / 100;
+    }
 };
 
-struct CmpStock // ÓÃÓÚ°´ÒªÇó¶Ô¹ÉÆ±½øĞĞÅÅĞò
+struct CmpStock // ç”¨äºæŒ‰è¦æ±‚å¯¹è‚¡ç¥¨è¿›è¡Œæ’åº
 {
     bool operator()(const Stock &a, const Stock &b)
     {
-        // ÏÈ°´¹ÉÆ±´úÂë×ÖµäĞòÅÅĞò
+        // å…ˆæŒ‰è‚¡ç¥¨ä»£ç å­—å…¸åºæ’åº
         if (a.tsCode != b.tsCode)
             return a.tsCode < b.tsCode;
-        // ¹ÉÆ±´úÂëÏàÍ¬Ôò°´ÈÕÆÚÅÅĞò
+        // è‚¡ç¥¨ä»£ç ç›¸åŒåˆ™æŒ‰æ—¥æœŸæ’åº
         else
             return a.tradeDate < b.tradeDate;
     }
@@ -57,9 +62,9 @@ struct CmpPair
     bool operator()(const std::pair<Stock, int> &p1, const std::pair<Stock, int> &p2)
     {
         if (p1.first.tsCode != p2.first.tsCode)
-            return p1.first.tsCode < p2.first.tsCode;
+            return p1.first.tsCode > p2.first.tsCode;
         else
-            return p1.first.tradeDate < p2.first.tradeDate;
+            return p1.first.tradeDate > p2.first.tradeDate;
     }
 };
 
